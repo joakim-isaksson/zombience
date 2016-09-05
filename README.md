@@ -1,2 +1,2 @@
 # Zombience
-![zombience](zombie.jpg)
+![zombience](zombience.jpg)
