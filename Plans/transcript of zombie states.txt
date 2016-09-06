@@ -1,0 +1,10 @@
+*use tabs to space between "cells"
+*wording may vary from whiteboard annotation
+	ability			|		source		|		strength		|		Weakness		|
+Spike Weapon		-Spike wall			-Kills enemies			-not zocially acceptable
+Floating			-Gass				-Jumps longer			-Big size
+Burning				-Fire				-Burn obstacles			-Burns objects
+Goo state			-Fall/stompd		-Small size				-Can't jump
+Special Vision		-Poison/tox			-see other thngs		-Can't see some things
+Splitted zombie		-Guillotine			-Be in two place		-Small size, can't control
+Battery				-Electrocuted		-Gives power			-Gives power
