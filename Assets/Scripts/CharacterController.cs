@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
-
 	[HideInInspector]
 	public bool FacingRight = true;
 	[HideInInspector]
@@ -18,27 +17,41 @@ public class PlayerController : MonoBehaviour
 	public float WalkingForce = 0.5f;
 	public float MaxWalkingSpeed = 1.0f;
 
+	public float LeathalFallingVelocity = -10.0f;
+
 	public AudioClip JumpSound;
 	public Transform GroundCheckPoint;
 
+	[HideInInspector]
+	public GameManager Manager;
+
+	private Rigidbody2D rb;
 	private AudioSource audioSource;
 
 	void Awake()
 	{
+		rb = GetComponent<Rigidbody2D>();
 		//audioSource = GetComponentInChildren<AudioSource>();
 	}
 
 	void Update()
 	{
+		bool wasInAir = !Grounded;
 		Grounded = Physics2D.Linecast(transform.position, GroundCheckPoint.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		if (!Freezed)
+		if (!Freezed && Grounded)
 		{
-			if (Grounded && Input.GetButtonDown("Jump"))
+			// *** DEATH BY FALLING
+			if (wasInAir && rb.velocity.y < LeathalFallingVelocity)
+			{
+				Freezed = true;
+				Manager.SpawnGoo();
+				Destroy(gameObject);
+			}
+			else if (Input.GetButtonDown("Jump"))
 			{
 				Jump = true;
 			}
-
 		}
 	}
 
@@ -47,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
 		if (Freezed)
 		{
-			GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+			rb.constraints = RigidbodyConstraints2D.FreezePositionX;
 			return;
 		}
 
@@ -57,13 +70,13 @@ public class PlayerController : MonoBehaviour
 		float jumpForce = JumpForce;
 		float maxSpeed = MaxWalkingSpeed;
 
-		GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * force);
+		rb.AddForce(Vector2.right * h * force);
 
-		if (h * GetComponent<Rigidbody2D>().velocity.x < maxSpeed)
-			GetComponent<Rigidbody2D>().AddForce(Vector2.right * h * force);
+		if (h * rb.velocity.x < maxSpeed)
+			rb.AddForce(Vector2.right * h * force);
 
-		if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > maxSpeed)
-			GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Sign(GetComponent<Rigidbody2D>().velocity.x) * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+		if (Mathf.Abs(rb.velocity.x) > maxSpeed)
+			rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
 
 		if (h > 0 && !FacingRight) Flip();
 		else if (h < 0 && FacingRight) Flip();
@@ -73,7 +86,7 @@ public class PlayerController : MonoBehaviour
 			if (!Freezed)
 			{
 				//audioSource.PlayOneShot(jumpSound);
-				GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+				rb.AddForce(new Vector2(0f, jumpForce));
 			}
 			Jump = false;
 		}

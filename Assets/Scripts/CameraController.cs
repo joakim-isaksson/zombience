@@ -7,19 +7,11 @@ public class CameraController : MonoBehaviour
 	public float OffSetY = 2f;
 	public float CameraSpeed = 4.0f;
 
-	private GameObject player;
-	private PlayerController playerController;
+	[HideInInspector]
+	public GameObject FollowObject;
 
 	private float targetX;
 	private float targetY;
-
-	void Awake()
-	{
-		player = GameObject.FindGameObjectWithTag("Player");
-		playerController = player.GetComponent<PlayerController>();
-		targetX = player.transform.position.x;
-		targetY = player.transform.position.y;
-	}
 
 	void FixedUpdate()
 	{
@@ -27,11 +19,11 @@ public class CameraController : MonoBehaviour
 		float cameraY = transform.position.y;
 		float cameraZ = transform.position.z;
 
-		targetX = player.transform.position.x + OffSetX;
-		targetY = player.transform.position.y + OffSetY;
+		targetX = FollowObject.transform.position.x + OffSetX;
+		targetY = FollowObject.transform.position.y + OffSetY;
 
-		float offsetX = cameraX - player.transform.position.x;
-		float offsetY = cameraY - player.transform.position.y;
+		float offsetX = cameraX - FollowObject.transform.position.x;
+		float offsetY = cameraY - FollowObject.transform.position.y;
 
 		cameraX = Mathf.Lerp(cameraX, targetX, Time.deltaTime * CameraSpeed);
 		cameraY = Mathf.Lerp(cameraY, targetY, Time.deltaTime * CameraSpeed);
