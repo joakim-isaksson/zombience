@@ -1,27 +1,30 @@
 fileFormatVersion: 2
 guid: eaab37cbd20325c4782e7dc09d196273
-timeCreated: 1473167661
+timeCreated: 1473183279
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: LeftTop
+    21300000: CornerLeftTop
     21300002: MiddleTop
-    21300004: RightTop
-    21300006: RightBottomCorner
-    21300008: BottomRightEdge
-    21300010: LeftBottomCorner
-    21300012: LeftMiddle
+    21300004: CornerRightTop
+    21300006: ground1
+    21300008: ground2
+    21300010: ground3
+    21300012: MiddleLeft
     21300014: Center
-    21300016: RightMiddle
-    21300018: RightEdge
-    21300020: Center2
-    21300022: LeftEdge
-    21300024: LeftBottom
+    21300016: MiddleRight
+    21300018: ground4
+    21300020: CliffLeft
+    21300022: ground5
+    21300024: CornerLeftBottom
     21300026: MiddleBottom
-    21300028: RightBottom
-    21300030: RightTopCorner
-    21300032: TopEdge
-    21300034: LeftTopCorner
+    21300028: CornerRightBottom
+    21300030: ground6
+    21300032: ground7
+    21300034: InsideCornerTopLeft
+    21300036: EdgeLeft
+    21300038: EdgeRight
+    21300040: InnerCornerTopLeft
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -68,11 +71,11 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: LeftTop
+    - name: CornerLeftTop
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -80,15 +83,14 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
-        - {x: -16, y: 1}
-        - {x: 9, y: -16}
+        - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
     - name: MiddleTop
       rect:
         serializedVersion: 2
         x: 32
-        y: 480
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -99,38 +101,11 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: RightTop
+    - name: CornerRightTop
       rect:
         serializedVersion: 2
         x: 64
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: RightBottomCorner
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 12, y: -3}
-        - {x: -1, y: -14}
-        - {x: -1, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: -3}
-    - name: BottomRightEdge
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 480
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -141,22 +116,11 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: LeftBottomCorner
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: LeftMiddle
+    - name: EdgeLeft
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -171,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 448
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -182,11 +146,11 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: RightMiddle
+    - name: EdgeRight
       rect:
         serializedVersion: 2
         x: 64
-        y: 448
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -197,55 +161,43 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: RightEdge
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Center2
+    - name: CliffLeft
       rect:
         serializedVersion: 2
         x: 128
-        y: 448
+        y: 32
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: LeftEdge
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: LeftBottom
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 3}
+        - {x: -8, y: -4}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: CornerLeftBottom
       rect:
         serializedVersion: 2
         x: 0
-        y: 416
+        y: 0
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
     - name: MiddleBottom
       rect:
         serializedVersion: 2
         x: 32
-        y: 416
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -256,22 +208,11 @@ TextureImporter:
         - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: RightBottom
+    - name: CornerRightBottom
       rect:
         serializedVersion: 2
         x: 64
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: RightTopCorner
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 416
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -279,32 +220,24 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -16, y: 16}
-        - {x: -16, y: 8}
-        - {x: 13, y: -16}
+        - {x: -16, y: -16}
         - {x: 16, y: -16}
         - {x: 16, y: 16}
-    - name: TopEdge
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: LeftTopCorner
+    - name: InnerCornerTopLeft
       rect:
         serializedVersion: 2
         x: 160
-        y: 416
+        y: 0
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
     outline: []
   spritePackingTag: Ground
   userData: 
