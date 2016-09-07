@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
 	[HideInInspector]
 	public bool Freezed = false;
 
+	public bool Flipping = false;
 	public float JumpForce = 1.0f;
 	public float WalkingForce = 0.5f;
 	public float MaxWalkingSpeed = 1.0f;
@@ -27,45 +28,44 @@ public class CharacterController : MonoBehaviour
 
 	private Rigidbody2D rb;
 	private AudioSource audioSource;
-
-	private bool leathalVelocityReached;
+	private Animator animator;
 
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
 		//audioSource = GetComponentInChildren<AudioSource>();
 	}
 
 	void Update()
 	{
-		bool wasInAir = !Grounded;
 		Grounded = Physics2D.Linecast(transform.position, GroundCheckPoint.position, 1 << LayerMask.NameToLayer("Ground"));
 
 		if (!Freezed && Grounded)
 		{
-			// *** DEATH BY FALLING
-			if (leathalVelocityReached)
-			{
-				leathalVelocityReached = false;
-
-				if (wasInAir)
-				{
-					Freezed = true;
-					Manager.SpawnGoo();
-					Destroy(gameObject);
-				}
-			}
-
 			if (Input.GetButtonDown("Jump"))
 			{
 				Jump = true;
 			}
 		}
+
+		animator.SetBool("Grounded", Grounded);
+		animator.SetFloat("VelocityX", rb.velocity.x);
+		animator.SetFloat("VelocityY", rb.velocity.y);
 	}
 
 	void FixedUpdate()
 	{
-		if (rb.velocity.y < LeathalFallingVelocity) leathalVelocityReached = true;
+		if (rb.velocity.y < LeathalFallingVelocity)
+		{
+			// *** DEATH BY FALLING
+			if (Grounded)
+			{
+				Freezed = true;
+				animator.SetTrigger("Death");
+				StartCoroutine(DestroyAndSpawn(2.0f));
+			}
+		}
 
 		if (Freezed)
 		{
@@ -87,8 +87,11 @@ public class CharacterController : MonoBehaviour
 		if (Mathf.Abs(rb.velocity.x) > maxSpeed)
 			rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
 
-		if (h > 0 && !FacingRight) Flip();
-		else if (h < 0 && FacingRight) Flip();
+		if (Flipping)
+		{
+			if (h > 0 && !FacingRight) Flip();
+			else if (h < 0 && FacingRight) Flip();
+		}
 
 		if (Jump)
 		{
@@ -96,6 +99,7 @@ public class CharacterController : MonoBehaviour
 			{
 				//audioSource.PlayOneShot(jumpSound);
 				rb.AddForce(new Vector2(0f, jumpForce));
+				animator.SetTrigger("Jump");
 			}
 			Jump = false;
 		}
@@ -108,5 +112,12 @@ public class CharacterController : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	IEnumerator DestroyAndSpawn(float time)
+	{
+		yield return new WaitForSeconds(time);
+		Manager.SpawnGoo();
+		Destroy(gameObject);
 	}
 }
