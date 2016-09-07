@@ -125,7 +125,7 @@ MonoBehaviour:
   Grounded: 0
   Jump: 0
   Freezed: 0
-  JumpForce: 260
+  JumpForce: 300
   WalkingForce: 100
   MaxWalkingSpeed: 1
   LeathalFallingVelocity: -10
