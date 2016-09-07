@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: add0f081cf49a714f964f666b6476990
-timeCreated: 1473163149
+timeCreated: 1473239083
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ZombieNormal_0
+    21300002: ZombieNormal_1
+    21300004: ZombieNormal_2
+    21300006: ZombieNormal_jumping1
+    21300008: ZombieNormal_jumping2
+    21300010: ZombieNormal_fallling
+    21300012: ZombieNormal_6
+    21300014: ZombieNormal_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,31 +35,169 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 512
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 69
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ZombieNormal_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5
+        width: 38
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 2}
+        - {x: 13, y: 6}
+        - {x: 15, y: 29}
+        - {x: 14, y: 38}
+        - {x: 15, y: 36}
+        - {x: 18, y: 36}
+        - {x: 19, y: 37}
+        - {x: 19, y: 49}
+        - {x: 9, y: 64}
+        - {x: -8, y: 64}
+        - {x: -19, y: 30}
+        - {x: -19, y: 0}
+        - {x: -10, y: 0}
+        - {x: -9, y: 3}
+        - {x: 0, y: 0}
+        - {x: 10, y: 0}
+    - name: ZombieNormal_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 5
+        width: 26
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 5
+        width: 29
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_jumping1
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 5
+        width: 31
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_jumping2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2
+        width: 37
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 67}
+        - {x: -18.5, y: 62}
+        - {x: -18.5, y: 0}
+        - {x: 2.5, y: 0}
+        - {x: 18.5, y: 35}
+        - {x: 18.5, y: 63}
+        - {x: 15.5, y: 67}
+    - name: ZombieNormal_fallling
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2
+        width: 34
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3, y: 3}
+        - {x: 8, y: 3}
+        - {x: 13, y: 11}
+        - {x: 17, y: 20}
+        - {x: 17, y: 52}
+        - {x: 15, y: 64}
+        - {x: -7, y: 64}
+        - {x: -17, y: 50}
+        - {x: -17, y: 16}
+        - {x: -13, y: 0}
+        - {x: -2, y: 0}
+        - {x: 0, y: 2}
+        - {x: 0, y: 5}
+        - {x: -2, y: 7}
+    - name: ZombieNormal_6
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 5
+        width: 55
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 19}
+        - {x: 18.5, y: 23}
+        - {x: 20.5, y: 22}
+        - {x: 24.5, y: 22}
+        - {x: 26.5, y: 24}
+        - {x: 27.5, y: 28}
+        - {x: 26.5, y: 34}
+        - {x: -27.5, y: 34}
+        - {x: -27.5, y: 0}
+        - {x: 20.5, y: 0}
+        - {x: 25.5, y: 5}
+        - {x: 27.5, y: 9}
+        - {x: 27.5, y: 18}
+    - name: ZombieNormal_8
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 5
+        width: 60
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: zombie
   userData: 
   assetBundleName: 
   assetBundleVariant: 
