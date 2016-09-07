@@ -61,8 +61,8 @@ public class CharacterController : MonoBehaviour
 			if (Grounded)
 			{
 				Freezed = true;
-				Manager.SpawnGoo();
-				Destroy(gameObject);
+				animator.SetTrigger("Death");
+				StartCoroutine(DestroyAndSpawn(2.0f));
 			}
 		}
 
@@ -108,5 +108,12 @@ public class CharacterController : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	IEnumerator DestroyAndSpawn(float time)
+	{
+		yield return new WaitForSeconds(time);
+		Manager.SpawnGoo();
+		Destroy(gameObject);
 	}
 }
