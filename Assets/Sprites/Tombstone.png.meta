@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: f8fb3445f3f460d4f885e10da21e3dbb
-timeCreated: 1473172421
+timeCreated: 1473235098
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Tombstone_0
+    21300002: Tombstone_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,9 +29,9 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 64
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -49,7 +51,43 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Tombstone_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 3}
+        - {x: -13, y: -1}
+        - {x: -16, y: -9}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -7}
+        - {x: 10, y: 3}
+    - name: Tombstone_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 5}
+        - {x: 15, y: 10}
+        - {x: 13, y: 13}
+        - {x: -9, y: 13}
+        - {x: -16, y: 9}
     outline: []
   spritePackingTag: 
   userData: 

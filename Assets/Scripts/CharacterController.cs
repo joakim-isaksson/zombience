@@ -28,6 +28,8 @@ public class CharacterController : MonoBehaviour
 	private Rigidbody2D rb;
 	private AudioSource audioSource;
 
+	private bool leathalVelocityReached;
+
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -42,13 +44,19 @@ public class CharacterController : MonoBehaviour
 		if (!Freezed && Grounded)
 		{
 			// *** DEATH BY FALLING
-			if (wasInAir && rb.velocity.y < LeathalFallingVelocity)
+			if (leathalVelocityReached)
 			{
-				Freezed = true;
-				Manager.SpawnGoo();
-				Destroy(gameObject);
+				leathalVelocityReached = false;
+
+				if (wasInAir)
+				{
+					Freezed = true;
+					Manager.SpawnGoo();
+					Destroy(gameObject);
+				}
 			}
-			else if (Input.GetButtonDown("Jump"))
+
+			if (Input.GetButtonDown("Jump"))
 			{
 				Jump = true;
 			}
@@ -57,6 +65,7 @@ public class CharacterController : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if (rb.velocity.y < LeathalFallingVelocity) leathalVelocityReached = true;
 
 		if (Freezed)
 		{
