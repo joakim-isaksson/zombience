@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: add0f081cf49a714f964f666b6476990
-timeCreated: 1473239083
+timeCreated: 1473248806
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,11 @@ TextureImporter:
     21300010: ZombieNormal_fallling
     21300012: ZombieNormal_6
     21300014: ZombieNormal_8
+    21300016: ZombieNormal_3
+    21300018: ZombieNormal_4
+    21300020: ZombieNormal_5
+    21300022: ZombieNormal_7
+    21300024: ZombieNormal_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,139 +66,150 @@ TextureImporter:
     - name: ZombieNormal_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 5
+        x: 0
+        y: 256
         width: 38
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 12, y: 2}
-        - {x: 13, y: 6}
-        - {x: 15, y: 29}
-        - {x: 14, y: 38}
-        - {x: 15, y: 36}
-        - {x: 18, y: 36}
-        - {x: 19, y: 37}
-        - {x: 19, y: 49}
-        - {x: 9, y: 64}
-        - {x: -8, y: 64}
-        - {x: -19, y: 30}
-        - {x: -19, y: 0}
-        - {x: -10, y: 0}
-        - {x: -9, y: 3}
-        - {x: 0, y: 0}
-        - {x: 10, y: 0}
+      - - {x: 12, y: -30}
+        - {x: 13, y: -26}
+        - {x: 15, y: -3}
+        - {x: 14, y: 6}
+        - {x: 15, y: 4}
+        - {x: 18, y: 4}
+        - {x: 19, y: 5}
+        - {x: 19, y: 17}
+        - {x: 9, y: 32}
+        - {x: -8, y: 32}
+        - {x: -19, y: -2}
+        - {x: -19, y: -32}
+        - {x: -10, y: -32}
+        - {x: -9, y: -29}
+        - {x: 0, y: -32}
+        - {x: 10, y: -32}
     - name: ZombieNormal_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 5
+        x: 41
+        y: 256
         width: 26
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: ZombieNormal_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 5
+        x: 70
+        y: 256
         width: 29
         height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: ZombieNormal_jumping1
+    - name: ZombieNormal_3
       rect:
         serializedVersion: 2
-        x: 104
-        y: 5
+        x: 102
+        y: 256
+        width: 26
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 192
         width: 31
         height: 57
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: ZombieNormal_jumping2
+    - name: ZombieNormal_5
       rect:
         serializedVersion: 2
-        x: 139
-        y: 2
+        x: 1
+        y: 124
         width: 37
         height: 67
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15.5, y: 67}
-        - {x: -18.5, y: 62}
-        - {x: -18.5, y: 0}
-        - {x: 2.5, y: 0}
-        - {x: 18.5, y: 35}
-        - {x: 18.5, y: 63}
-        - {x: 15.5, y: 67}
-    - name: ZombieNormal_fallling
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 2
-        width: 34
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 3, y: 3}
-        - {x: 8, y: 3}
-        - {x: 13, y: 11}
-        - {x: 17, y: 20}
-        - {x: 17, y: 52}
-        - {x: 15, y: 64}
-        - {x: -7, y: 64}
-        - {x: -17, y: 50}
-        - {x: -17, y: 16}
-        - {x: -13, y: 0}
-        - {x: -2, y: 0}
-        - {x: 0, y: 2}
-        - {x: 0, y: 5}
-        - {x: -2, y: 7}
+      - - {x: -15.5, y: 33.5}
+        - {x: -18.5, y: 28.5}
+        - {x: -18.5, y: -33.5}
+        - {x: 2.5, y: -33.5}
+        - {x: 18.5, y: 1.5}
+        - {x: 18.5, y: 29.5}
+        - {x: 15.5, y: 33.5}
     - name: ZombieNormal_6
       rect:
         serializedVersion: 2
-        x: 225
-        y: 5
-        width: 55
-        height: 34
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 58
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 24.5, y: 19}
-        - {x: 18.5, y: 23}
-        - {x: 20.5, y: 22}
-        - {x: 24.5, y: 22}
-        - {x: 26.5, y: 24}
-        - {x: 27.5, y: 28}
-        - {x: 26.5, y: 34}
-        - {x: -27.5, y: 34}
-        - {x: -27.5, y: 0}
-        - {x: 20.5, y: 0}
-        - {x: 25.5, y: 5}
-        - {x: 27.5, y: 9}
-        - {x: 27.5, y: 18}
-    - name: ZombieNormal_8
+      - - {x: 3, y: -29}
+        - {x: 8, y: -29}
+        - {x: 13, y: -21}
+        - {x: 17, y: -12}
+        - {x: 17, y: 20}
+        - {x: 15, y: 32}
+        - {x: -7, y: 32}
+        - {x: -17, y: 18}
+        - {x: -17, y: -16}
+        - {x: -13, y: -32}
+        - {x: -2, y: -32}
+        - {x: 0, y: -30}
+        - {x: 0, y: -27}
+        - {x: -2, y: -25}
+    - name: ZombieNormal_7
       rect:
         serializedVersion: 2
-        x: 288
-        y: 5
-        width: 60
+        x: 0
+        y: 21
+        width: 55
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.5, y: 2}
+        - {x: 18.5, y: 6}
+        - {x: 20.5, y: 5}
+        - {x: 24.5, y: 5}
+        - {x: 26.5, y: 7}
+        - {x: 27.5, y: 11}
+        - {x: 26.5, y: 17}
+        - {x: -27.5, y: 17}
+        - {x: -27.5, y: -17}
+        - {x: 20.5, y: -17}
+        - {x: 25.5, y: -12}
+        - {x: 27.5, y: -8}
+        - {x: 27.5, y: 1}
+    - name: ZombieNormal_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 21
+        width: 58
         height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

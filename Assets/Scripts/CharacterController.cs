@@ -27,45 +27,44 @@ public class CharacterController : MonoBehaviour
 
 	private Rigidbody2D rb;
 	private AudioSource audioSource;
-
-	private bool leathalVelocityReached;
+	private Animator animator;
 
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
 		//audioSource = GetComponentInChildren<AudioSource>();
 	}
 
 	void Update()
 	{
-		bool wasInAir = !Grounded;
 		Grounded = Physics2D.Linecast(transform.position, GroundCheckPoint.position, 1 << LayerMask.NameToLayer("Ground"));
 
 		if (!Freezed && Grounded)
 		{
-			// *** DEATH BY FALLING
-			if (leathalVelocityReached)
-			{
-				leathalVelocityReached = false;
-
-				if (wasInAir)
-				{
-					Freezed = true;
-					Manager.SpawnGoo();
-					Destroy(gameObject);
-				}
-			}
-
 			if (Input.GetButtonDown("Jump"))
 			{
 				Jump = true;
 			}
 		}
+
+		animator.SetBool("Grounded", Grounded);
+		animator.SetFloat("VelocityX", rb.velocity.x);
+		animator.SetFloat("VelocityY", rb.velocity.y);
 	}
 
 	void FixedUpdate()
 	{
-		if (rb.velocity.y < LeathalFallingVelocity) leathalVelocityReached = true;
+		if (rb.velocity.y < LeathalFallingVelocity)
+		{
+			// *** DEATH BY FALLING
+			if (Grounded)
+			{
+				Freezed = true;
+				Manager.SpawnGoo();
+				Destroy(gameObject);
+			}
+		}
 
 		if (Freezed)
 		{
@@ -96,6 +95,7 @@ public class CharacterController : MonoBehaviour
 			{
 				//audioSource.PlayOneShot(jumpSound);
 				rb.AddForce(new Vector2(0f, jumpForce));
+				animator.SetTrigger("Jump");
 			}
 			Jump = false;
 		}
