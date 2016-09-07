@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
 	[HideInInspector]
 	public bool Freezed = false;
 
+	public bool Flipping = false;
 	public float JumpForce = 1.0f;
 	public float WalkingForce = 0.5f;
 	public float MaxWalkingSpeed = 1.0f;
@@ -86,8 +87,11 @@ public class CharacterController : MonoBehaviour
 		if (Mathf.Abs(rb.velocity.x) > maxSpeed)
 			rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
 
-		if (h > 0 && !FacingRight) Flip();
-		else if (h < 0 && FacingRight) Flip();
+		if (Flipping)
+		{
+			if (h > 0 && !FacingRight) Flip();
+			else if (h < 0 && FacingRight) Flip();
+		}
 
 		if (Jump)
 		{

@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6103582}
   - 50: {fileID: 5051266}
   - 114: {fileID: 11428270}
+  - 95: {fileID: 9553422}
   m_Layer: 0
   m_Name: Goo
   m_TagString: Player
@@ -42,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 145822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 461712}
@@ -89,9 +90,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0038523376, y: 0.101789415}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3836248, y: 0.19545543}
+--- !u!95 &9553422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145822}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1564a9de552369e458ced697f20a9788, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11428270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,6 +125,7 @@ MonoBehaviour:
   Grounded: 0
   Jump: 0
   Freezed: 0
+  Flipping: 0
   JumpForce: 0
   WalkingForce: 50
   MaxWalkingSpeed: 0.75
@@ -140,7 +159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 533e4053ce995ab4fbcef73e003e5ed5, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 7bf8a42e48f7d1143ba4deefa5a6ddfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
