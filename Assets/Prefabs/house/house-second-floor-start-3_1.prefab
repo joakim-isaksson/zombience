@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 410750}
   - 212: {fileID: 21253216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house_23 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 486080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-2_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-start-3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497726}
   - 212: {fileID: 21234414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-start-border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460636}
   - 212: {fileID: 21292454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house_28 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.628546, y: 7.345153, z: 0}
+  m_LocalPosition: {x: 15.63, y: 5.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
