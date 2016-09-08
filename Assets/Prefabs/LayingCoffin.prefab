@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 477234}
   - 212: {fileID: 21206736}
-  - 61: {fileID: 6194940}
   - 50: {fileID: 5073238}
+  - 60: {fileID: 6096412}
   m_Layer: 8
   m_Name: LayingCoffin
   m_TagString: Untagged
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 0.92, z: 0}
+  m_LocalPosition: {x: 18.56, y: 0.92, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -39,7 +39,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178828}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -48,20 +48,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6194940
-BoxCollider2D:
+--- !u!60 &6096412
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178828}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_Material: {fileID: 6200000, guid: e718a372df475054d810c56639b6dec7, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.0021486282, y: -0.0006173849}
-  serializedVersion: 2
-  m_Size: {x: 0.93611467, y: 0.42064017}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.4974804, y: 0.20286605}
+      - {x: -0.49829483, y: 0.03852552}
+      - {x: -0.4640808, y: -0.20987543}
+      - {x: 0.469759, y: -0.2109375}
+      - {x: 0.49942493, y: 0.037442356}
+      - {x: 0.49882507, y: 0.20678541}
 --- !u!212 &21206736
 SpriteRenderer:
   m_ObjectHideFlags: 1

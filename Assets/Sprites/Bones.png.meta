@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: 468efa092266a90418d6df61bf72c738
-timeCreated: 1473324222
+timeCreated: 1473343552
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Bones_0
+    21300002: Bones_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,27 +31,66 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Bones_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 10}
+        - {x: -9, y: 5}
+        - {x: -9, y: -5}
+        - {x: -3, y: -10}
+        - {x: 6, y: -10}
+        - {x: 10, y: -8}
+        - {x: 10, y: 4}
+        - {x: 5, y: 10}
+    - name: Bones_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 7}
+        - {x: -6, y: 7}
+        - {x: -10, y: -1}
+        - {x: -10, y: -9}
+        - {x: -5, y: -11}
+        - {x: -2, y: -11}
+        - {x: 1, y: -8}
+        - {x: 9, y: -2}
+        - {x: 9, y: 3}
     outline: []
   spritePackingTag: 
   userData: 

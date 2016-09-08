@@ -75,7 +75,7 @@ public class CharacterController : MonoBehaviour
 				audioSource.PlayOneShot(HitGroundSound);
 				Freezed = true;
 				animator.SetTrigger("Death");
-				StartCoroutine(DestroyAndSpawn(2.0f));
+				StartCoroutine(DestroyAndSpawn(1.5f));
 			}
 		}
 
