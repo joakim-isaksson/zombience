@@ -30,6 +30,8 @@ public class CharacterController : MonoBehaviour
 	private AudioSource audioSource;
 	private Animator animator;
 
+	private bool jumpOnCooldown;
+
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -41,12 +43,10 @@ public class CharacterController : MonoBehaviour
 	{
 		Grounded = Physics2D.Linecast(transform.position, GroundCheckPoint.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		if (!Freezed && Grounded)
+		if (!Freezed && Grounded && !jumpOnCooldown && Input.GetButtonDown("Jump"))
 		{
-			if (Input.GetButtonDown("Jump"))
-			{
-				Jump = true;
-			}
+			StartCoroutine(SetJumpOnCooldown(1.0f));
+			Jump = true;
 		}
 
 		animator.SetBool("Grounded", Grounded);
@@ -119,5 +119,12 @@ public class CharacterController : MonoBehaviour
 		yield return new WaitForSeconds(time);
 		Manager.SpawnGoo();
 		Destroy(gameObject);
+	}
+
+	IEnumerator SetJumpOnCooldown(float time)
+	{
+		jumpOnCooldown = true;
+		yield return new WaitForSeconds(time);
+		jumpOnCooldown = false;
 	}
 }
