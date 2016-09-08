@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour
@@ -42,6 +43,11 @@ public class GameManager : MonoBehaviour
 		if (Input.GetButtonDown("Cancel"))
 		{
 			Application.Quit();
+		}
+
+		if (Input.GetButtonDown("Reset"))
+		{
+			SceneManager.LoadScene(0);
 		}
 	}
 }
