@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 98b09e5883cb4b24c8639095e92714be
-timeCreated: 1473339869
+timeCreated: 1473356542
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ZombieFriends_0
+    21300002: ZombieFriends_1
+    21300004: ZombieFriends_2
+    21300006: ZombieFriends_3
+    21300008: ZombieFriends_4
+    21300010: ZombieFriends_5
+    21300012: ZombieFriends_6
+    21300014: ZombieFriends_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,29 +35,117 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 256
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: ZombieFriends_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 29
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 220
+        width: 33
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 151
+        width: 20
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 151
+        width: 20
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 26
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 79
+        width: 27
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 27
+        height: 69
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieFriends_7
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 7
+        width: 30
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
