@@ -1069,7 +1069,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 482246}
-  m_Layer: 0
+  - 61: {fileID: 6182154}
+  - 61: {fileID: 6109056}
+  - 60: {fileID: 6056622}
+  m_Layer: 8
   m_Name: small house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2126,7 +2129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.124138, y: 2.6325395, z: 0.00390625}
+  m_LocalPosition: {x: 32.13, y: 2.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -2414,6 +2417,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 479936}
   m_RootOrder: 2
+--- !u!60 &6056622
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.37903976, y: 5.8613653}
+      - {x: 4.626629, y: 3.7354681}
+      - {x: 4.628563, y: 3.60943}
+      - {x: -3.8733025, y: 3.6085994}
+      - {x: -3.8735352, y: 3.7352436}
+--- !u!61 &6109056
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 5781d0271cf83544f9efc7ce6dfd1326, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.3735199, y: 1.8687584}
+  serializedVersion: 2
+  m_Size: {x: 7.96636, y: 3.991922}
+--- !u!61 &6182154
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.13349152, y: -2.638503}
+  serializedVersion: 2
+  m_Size: {x: 8.971473, y: 0.9864483}
 --- !u!212 &21201402
 SpriteRenderer:
   m_ObjectHideFlags: 1

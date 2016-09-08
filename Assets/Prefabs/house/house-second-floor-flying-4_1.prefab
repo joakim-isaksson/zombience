@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417452}
   - 212: {fileID: 21223788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house_28 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434206}
   - 212: {fileID: 21241480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-end-border (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 409210}
   - 212: {fileID: 21204546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-start-border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 424592}
   - 212: {fileID: 21233342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house_23 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: house-second-floor-2_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 464054}
-  m_Layer: 0
+  - 61: {fileID: 6113212}
+  m_Layer: 8
   m_Name: house-second-floor-flying-4_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.155917, y: 7.0000033, z: 0}
+  m_LocalPosition: {x: -5.8014603, y: 1.0726581, z: -0.00390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -177,6 +178,20 @@ Transform:
   - {fileID: 424592}
   m_Father: {fileID: 464054}
   m_RootOrder: 1
+--- !u!61 &6113212
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 5.345686, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 4.0034714, y: 1}
 --- !u!212 &21204546
 SpriteRenderer:
   m_ObjectHideFlags: 1
