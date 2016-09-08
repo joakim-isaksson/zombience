@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DeathByFalling : MonoBehaviour
+public class TurnToNormal : MonoBehaviour
 {
-
 	private GameManager manager;
 
 	void Awake()
@@ -13,10 +12,10 @@ public class DeathByFalling : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag.Equals("Player"))
+		if (other.tag.Equals("Player") && !manager.Zombie)
 		{
 			Destroy(other.gameObject);
-			manager.SpawnZombie();
+			manager.SpawnZombie(other.transform);
 		}
 	}
 }

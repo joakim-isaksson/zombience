@@ -9,16 +9,24 @@ public class GameManager : MonoBehaviour
 	public GameObject ZombiePrefab;
 	public GameObject GooPrefab;
 
+	public bool Zombie;
+
 	public void SpawnZombie()
 	{
+		SpawnZombie(SpawnPoint);
+	}
 
-		GameObject character = (GameObject)Instantiate(ZombiePrefab, SpawnPoint.position, SpawnPoint.rotation);
+	public void SpawnZombie(Transform transform)
+	{
+		Zombie = true;
+		GameObject character = (GameObject)Instantiate(ZombiePrefab, transform.position, transform.rotation);
 		CameraController.FollowObject = character;
 		character.GetComponent<CharacterController>().Manager = this;
 	}
 
 	public void SpawnGoo()
 	{
+		Zombie = false;
 		GameObject character = (GameObject)Instantiate(GooPrefab, SpawnPoint.position, SpawnPoint.rotation);
 		CameraController.FollowObject = character;
 		character.GetComponent<CharacterController>().Manager = this;
