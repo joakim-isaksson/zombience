@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21261214}
   - 114: {fileID: 11407576}
   - 61: {fileID: 6112952}
+  - 82: {fileID: 8239784}
   m_Layer: 0
   m_Name: Grave
   m_TagString: Untagged
@@ -74,6 +75,80 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.20800912}
   serializedVersion: 2
   m_Size: {x: 1, y: 0.58398175}
+--- !u!82 &8239784
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164090}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11407576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +163,7 @@ MonoBehaviour:
   ActiveSprite: {fileID: 21300002, guid: f8fb3445f3f460d4f885e10da21e3dbb, type: 3}
   DeactiveSprite: {fileID: 21300000, guid: f8fb3445f3f460d4f885e10da21e3dbb, type: 3}
   SpawnPoint: {fileID: 440592}
+  ActivationSound: {fileID: 8300000, guid: bfe79638ececaf04a9df7a83cbcaa27c, type: 3}
 --- !u!212 &21261214
 SpriteRenderer:
   m_ObjectHideFlags: 1

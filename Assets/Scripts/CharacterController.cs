@@ -17,11 +17,15 @@ public class CharacterController : MonoBehaviour
 	public float JumpForce = 1.0f;
 	public float WalkingForce = 0.5f;
 	public float MaxWalkingSpeed = 1.0f;
+	public float JumpCD = 0.6f;
 
 	public float LeathalFallingVelocity = -10.0f;
 
-	public AudioClip JumpSound;
 	public Transform GroundCheckPoint;
+
+	public AudioClip JumpSound;
+	public AudioClip SpawnSound;
+	public AudioClip HitGroundSound;
 
 	[HideInInspector]
 	public GameManager Manager;
@@ -30,13 +34,19 @@ public class CharacterController : MonoBehaviour
 	private AudioSource audioSource;
 	private Animator animator;
 
+	private bool died = false;
 	private bool jumpOnCooldown;
 
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
-		//audioSource = GetComponentInChildren<AudioSource>();
+		audioSource = GetComponentInChildren<AudioSource>();
+	}
+
+	void Start()
+	{
+		audioSource.PlayOneShot(SpawnSound);
 	}
 
 	void Update()
@@ -45,7 +55,7 @@ public class CharacterController : MonoBehaviour
 
 		if (!Freezed && Grounded && !jumpOnCooldown && Input.GetButtonDown("Jump"))
 		{
-			StartCoroutine(SetJumpOnCooldown(1.0f));
+			StartCoroutine(SetJumpOnCooldown(JumpCD));
 			Jump = true;
 		}
 
@@ -59,8 +69,10 @@ public class CharacterController : MonoBehaviour
 		if (rb.velocity.y < LeathalFallingVelocity)
 		{
 			// *** DEATH BY FALLING
-			if (Grounded)
+			if (!died && Grounded)
 			{
+				died = true;
+				audioSource.PlayOneShot(HitGroundSound);
 				Freezed = true;
 				animator.SetTrigger("Death");
 				StartCoroutine(DestroyAndSpawn(2.0f));
@@ -97,7 +109,7 @@ public class CharacterController : MonoBehaviour
 		{
 			if (!Freezed)
 			{
-				//audioSource.PlayOneShot(jumpSound);
+				audioSource.PlayOneShot(JumpSound);
 				rb.AddForce(new Vector2(0f, jumpForce));
 				animator.SetTrigger("Jump");
 			}

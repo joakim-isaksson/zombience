@@ -9,10 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 401994}
   - 212: {fileID: 21258182}
-  - 61: {fileID: 6103582}
   - 50: {fileID: 5051266}
   - 114: {fileID: 11428270}
   - 95: {fileID: 9553422}
+  - 58: {fileID: 5825772}
+  - 82: {fileID: 8274998}
   m_Layer: 0
   m_Name: Goo
   m_TagString: Player
@@ -79,20 +80,94 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6103582
-BoxCollider2D:
+--- !u!58 &5825772
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145822}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.0017771721, y: 0.101789415}
+  m_Offset: {x: 0, y: 0.155}
   serializedVersion: 2
-  m_Size: {x: 0.3379722, y: 0.19545543}
+  m_Radius: 0.14993477
+--- !u!82 &8274998
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145822}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9553422
 Animator:
   serializedVersion: 3
@@ -129,9 +204,11 @@ MonoBehaviour:
   JumpForce: 0
   WalkingForce: 50
   MaxWalkingSpeed: 0.75
+  JumpCD: 0.7
   LeathalFallingVelocity: -100
   JumpSound: {fileID: 0}
   GroundCheckPoint: {fileID: 461712}
+  SpawnSound: {fileID: 8300000, guid: 0e576341002cd21438ab908f92c694b9, type: 3}
   Manager: {fileID: 0}
 --- !u!212 &21258182
 SpriteRenderer:

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
 	public void SpawnZombie()
 	{
+
 		GameObject character = (GameObject)Instantiate(ZombiePrefab, SpawnPoint.position, SpawnPoint.rotation);
 		CameraController.FollowObject = character;
 		character.GetComponent<CharacterController>().Manager = this;

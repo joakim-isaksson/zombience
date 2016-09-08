@@ -28,6 +28,7 @@ GameObject:
   - 50: {fileID: 5003646}
   - 114: {fileID: 11471570}
   - 95: {fileID: 9576064}
+  - 82: {fileID: 8257266}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Player
@@ -93,6 +94,80 @@ BoxCollider2D:
   m_Offset: {x: -0.053739905, y: 0.48346472}
   serializedVersion: 2
   m_Size: {x: 0.22979617, y: 0.9250034}
+--- !u!82 &8257266
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114834}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &9576064
 Animator:
   serializedVersion: 3
@@ -126,12 +201,15 @@ MonoBehaviour:
   Jump: 0
   Freezed: 0
   Flipping: 1
-  JumpForce: 300
+  JumpForce: 310
   WalkingForce: 100
   MaxWalkingSpeed: 1
+  JumpCD: 0.6
   LeathalFallingVelocity: -10
-  JumpSound: {fileID: 0}
   GroundCheckPoint: {fileID: 482400}
+  JumpSound: {fileID: 8300000, guid: bce6488223286374db2b3758f1e0109e, type: 3}
+  SpawnSound: {fileID: 8300000, guid: c942e3ce86f635d4b92809917232043c, type: 3}
+  HitGroundSound: {fileID: 8300000, guid: dbb15cf07912e364997fda256eb3bc80, type: 3}
   Manager: {fileID: 0}
 --- !u!212 &21203732
 SpriteRenderer:
