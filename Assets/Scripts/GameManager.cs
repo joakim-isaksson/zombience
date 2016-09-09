@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
 		if (Input.GetButtonDown("Reset"))
 		{
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene("Level1");
 		}
 	}
 }

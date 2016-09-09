@@ -22,9 +22,6 @@ public class CameraController : MonoBehaviour
 		targetX = FollowObject.transform.position.x + OffSetX;
 		targetY = FollowObject.transform.position.y + OffSetY;
 
-		float offsetX = cameraX - FollowObject.transform.position.x;
-		float offsetY = cameraY - FollowObject.transform.position.y;
-
 		cameraX = Mathf.Lerp(cameraX, targetX, Time.deltaTime * CameraSpeed);
 		cameraY = Mathf.Lerp(cameraY, targetY, Time.deltaTime * CameraSpeed);
 
