@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11471570}
   - 95: {fileID: 9576064}
   - 82: {fileID: 8257266}
+  - 58: {fileID: 5832902}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Player
@@ -80,6 +81,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &5832902
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114834}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 4c17da6761da8bd48b6d0614f7ca9c5b, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.05, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 0.14334202
 --- !u!61 &6158602
 BoxCollider2D:
   m_ObjectHideFlags: 1

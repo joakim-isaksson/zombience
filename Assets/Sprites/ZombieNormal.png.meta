@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: add0f081cf49a714f964f666b6476990
-timeCreated: 1473259039
+timeCreated: 1473411391
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,7 @@ TextureImporter:
     21300020: ZombieNormal_5
     21300022: ZombieNormal_7
     21300024: ZombieNormal_9
+    21300026: ZombieNormal_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -93,9 +94,9 @@ TextureImporter:
     - name: ZombieNormal_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 41
         y: 256
-        width: 26
+        width: 27
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -208,6 +209,28 @@ TextureImporter:
         y: 21
         width: 60
         height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 30
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: ZombieNormal_11
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 160
+        width: 29
+        height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
