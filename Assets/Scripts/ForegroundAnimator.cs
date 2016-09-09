@@ -60,14 +60,14 @@ public class ForegroundAnimator : MonoBehaviour
 		if (Random.value > 0.5) direction = -1;
 
 		Vector3 fromPoint = new Vector3(
-			direction * Random.Range(MinOffsetX, MaxOffsetX),
-			direction * Random.Range(MinOffsetX, MaxOffsetX),
+			CenterPoint.position.x + (direction * Random.Range(MinOffsetX, MaxOffsetX)),
+			CenterPoint.position.y + (direction * Random.Range(MinOffsetX, MaxOffsetX)),
 			0
 		);
 
 		targetPoint = new Vector3(
-			(-direction) * Random.Range(MinOffsetX, MaxOffsetX),
-			(-direction) * Random.Range(MinOffsetX, MaxOffsetX),
+			CenterPoint.position.x + ((-direction) * Random.Range(MinOffsetX, MaxOffsetX)),
+			CenterPoint.position.y + ((-direction) * Random.Range(MinOffsetX, MaxOffsetX)),
 			0
 		);
 

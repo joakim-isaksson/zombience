@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 160114, guid: ace6bab96f07e5b44ac492b386cbeed2, type: 2}
-  MinDelay: 5
-  MaxDelay: 10
+  MinDelay: 10
+  MaxDelay: 20
   MinSpeed: 20
   MaxSpeed: 40
   MinSize: 5
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 160114, guid: ace6bab96f07e5b44ac492b386cbeed2, type: 2}
-  MinDelay: 1
-  MaxDelay: 5
+  MinDelay: 2
+  MaxDelay: 10
   MinSpeed: 10
   MaxSpeed: 20
   MinSize: 1
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 160114, guid: ace6bab96f07e5b44ac492b386cbeed2, type: 2}
-  MinDelay: 1
-  MaxDelay: 5
+  MinDelay: 2
+  MaxDelay: 10
   MinSpeed: 10
   MaxSpeed: 20
   MinSize: 1
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 160114, guid: ace6bab96f07e5b44ac492b386cbeed2, type: 2}
-  MinDelay: 5
-  MaxDelay: 10
+  MinDelay: 10
+  MaxDelay: 20
   MinSpeed: 20
   MaxSpeed: 40
   MinSize: 5
